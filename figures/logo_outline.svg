@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -8 556 286" width="556" height="286">
+  <style>
+    .eye {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: blink 5.6s ease-in-out infinite;
+    }
+    @keyframes blink {
+      0%, 14% { transform: scaleY(1); }
+      16% { transform: scaleY(0.08); }
+      19% { transform: scaleY(1); }
+      21.5% { transform: scaleY(0.08); }
+      25%, 100% { transform: scaleY(1); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .eye { animation: none; }
+    }
+  </style>
+  <path
+    fill="#982870"
+    stroke="#4a1238"
+    stroke-width="8"
+    stroke-linejoin="round"
+    d="m 28.331485,260.87217 104.509325,-89.20166 7.41076,6.42267 81.30397,-65.89522 29.3634,20.27473 78.30239,-68.514604 38.45207,57.328544 72.70936,-103.471034 87.39107,241.898484 z" />
+  <g class="eye">
+    <ellipse cx="255" cy="190" rx="36" ry="42" fill="#f7f4f2" />
+    <circle cx="266" cy="198" r="15" fill="#1a1a1a" />
+  </g>
+  <g class="eye">
+    <ellipse cx="360" cy="190" rx="36" ry="42" fill="#f7f4f2" />
+    <circle cx="371" cy="198" r="15" fill="#1a1a1a" />
+  </g>
+  <path
+    d="M 294 226 Q 322 252 350 226"
+    fill="none"
+    stroke="#1a1a1a"
+    stroke-width="8"
+    stroke-linecap="round" />
+</svg>

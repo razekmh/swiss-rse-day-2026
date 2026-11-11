@@ -1,0 +1,249 @@
+---
+author: Mahmoud Abdelrazek
+date: 2026-11-10
+title: "Swiss RSE Day 2026"
+subtitle: "ETH Zurich"
+format:
+  revealjs:
+    css: timeline.css
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+        <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+    include-after-body: timeline.html
+    progress: false
+    slide-number: false
+resources:
+  - figures/logo_outline.svg
+  - life-map.js
+---
+
+# whoami {.whoami}
+
+## init {data-city="Jeddah" data-lon="39.145" data-lat="21.515" data-zoom="5"}
+
+![](figures/Bike_jeddah.jpeg)
+
+[\@Jeddah_Project](https://x.com/Jeddah_Project/){.img-source}
+
+## init {data-city="Mansoura" data-lon="31.38" data-lat="31.05" data-zoom="7"}
+
+::: {.pair}
+![](figures/Umm_Kulthum_Paris_1.jpg){.nostretch}
+![](figures/saint-louis-man.jpg){.nostretch}
+:::
+
+## init {data-city="Port Said" data-lon="32.3019" data-lat="31.2653" data-zoom="7"}
+
+![](figures/portsaid_bike.jpg)
+
+## rocks {data-city="Damietta" data-lon="31.683137" data-lat="31.439394" data-zoom="8"}
+
+![](figures/polarizer_rock.png){.nostretch .rock}
+
+## desert {data-city="Red Sea Desert" data-lon="34.016485" data-lat="24.880969" data-zoom="6"}
+
+![](figures/tent_night.jpg)
+
+## Misr {data-city="Cairo" data-lon="31.2357" data-lat="30.0444" data-zoom="7"}
+
+![](figures/Ramses_Station.jpeg)
+[by Faris El-Gwely](https://www.wikidata.org/wiki/Q117800644){.img-source}
+
+## welcome {data-city="London" data-lon="-0.1278" data-lat="51.5074" data-zoom="6"}
+
+![](figures/tube.jpg)
+[by TBT SimPlayer](https://en.wikipedia.org/wiki/Piccadilly_line#/media/File:LU1973_Refurbished_Interior.jpg){.img-source}
+
+
+## welcome {data-city="Cambridge" data-lon="0.1218" data-lat="52.2053" data-zoom="8"}
+
+![](figures/No.jpg)
+
+## welcome {data-city="London" data-lon="-0.1278" data-lat="51.5074" data-zoom="8"}
+
+![](figures/UK_challange.jpg)
+
+<!--
+Each station under whoami is a slide. Put the place on the heading:
+
+## Heading {data-city="Zurich" data-lon="8.54" data-lat="47.38" data-zoom="10"}
+
+data-city   name shown on the map
+data-lon    longitude, west is negative
+data-lat    latitude, south is negative
+data-zoom   optional, default 6
+
+The map stays on the right and moves when the slide changes.
+A slide that starts with one # keeps its name on the rail.
+-->
+
+# First day
+
+::: {style="text-align: center;" .fragment}
+![](figures/UK_Soc_RSE.png){height="60%"}
+[by society of RSE](https://society-rse.org/){.img-source}
+:::
+
+## First day
+
+![](figures/rse.png){.slide-photo .nostretch}
+
+
+## First day
+
+::: {style="text-align: center;"}
+![](figures/Reception.jpg){.slide-photo}
+[by Swiss RSE](https://rse.swiss/blog/2026_10_12_pictures_from_the_first_swiss_rse_day/){.img-source}
+:::
+
+## SWISS RSE Day
+
+Research software engineers from [academia]{style="color: #577399;"}, [research institutes]{style="color: #BDD5EA;"}, and [industry]{style="color: #FE5F55;"} spent a full day together at ETH Zurich.
+
+::: {.nonincremental}
+- 31 August 2026, 09:00–17:00
+- CAB, ETH Zurich
+- 26 talks - 2 keynotes
+- Close to 150 attendees
+- [Event page](https://rse.swiss/swiss_rse_day/)
+:::
+
+# AIAIAI
+
+![](figures/AI Keynote.png){.slide-photo .nostretch}
+
+[by [Markus Kreft](https://www.agenticsystemslab.org/team/markus-kreft)]{.img-source}
+
+---
+
+### Acronym-Induced Anxiety Illness And Irritation
+
+![](figures/How to use AI.png){.slide-photo .nostretch}
+
+by [Markus Kreft](https://www.agenticsystemslab.org/team/markus-kreft)
+
+---
+
+## why RSE
+
+![](figures/why RSE.png){.slide-photo .nostretch}
+
+by [Markus Kreft](https://www.agenticsystemslab.org/team/markus-kreft)
+
+# Software Craft
+Track 3
+
+## EVERSE
+![](figures/EVERSE.png){.slide-photo .nostretch}
+
+by [Kenneth Rioja](https://kennethrioja.github.io/)
+
+## EVERSE
+![](figures/RSQKit.png){.slide-photo .nostretch}
+
+by [Kenneth Rioja](https://kennethrioja.github.io/)
+
+## Why make it long and understandable when you can make it short and terrible ?
+
+by [Samuel Gaist](https://www.idiap.ch/~sgaist/)
+
+## the talk was
+
+![](figures/great.png){.slide-photo .nostretch}
+
+by [Samuel Gaist](https://www.idiap.ch/~sgaist/)
+
+## short
+
+![](figures/short1.png){.slide-photo .nostretch}
+
+by [Samuel Gaist](https://www.idiap.ch/~sgaist/)
+
+## short
+
+![](figures/short2.png){.slide-photo .nostretch}
+
+by [Samuel Gaist](https://www.idiap.ch/~sgaist/)
+
+## short
+
+![](figures/short3.png){.slide-photo .nostretch}
+
+by [Samuel Gaist](https://www.idiap.ch/~sgaist/)
+
+## verbose
+
+![](figures/verbose.png){.slide-photo .nostretch}
+
+by [Samuel Gaist](https://www.idiap.ch/~sgaist/)
+
+
+# Open Research Data
+by [James Runnalls](https://www.eawag.ch/en/about-us/portrait/organisation/staff/profile/james-runnalls/show/)
+
+## FAIR Enough?
+
+![](figures/data reuse.png){.slide-photo .nostretch}
+
+by [James Runnalls](https://www.eawag.ch/en/about-us/portrait/organisation/staff/profile/james-runnalls/show/)
+
+
+## IKEA
+
+![](figures/ikea.png){.slide-photo .nostretch}
+
+by [James Runnalls](https://www.eawag.ch/en/about-us/portrait/organisation/staff/profile/james-runnalls/show/)
+
+
+## > 1
+
+![](figures/bus.png){.slide-photo .nostretch}
+
+by [James Runnalls](https://www.eawag.ch/en/about-us/portrait/organisation/staff/profile/james-runnalls/show/)
+
+# Track 3
+again
+
+## The case for RSEs
+
+![](figures/histogram.png){.slide-photo .nostretch}
+
+by [Erik Fröjdh](https://www.psi.ch/en/lxn/people/lars-erik-frojd)
+
+## The case for RSEs
+"Shows how an RSE turned PSI’s one-off detector scripts into fast shared software, cutting a 2.5-hour calibration to 3 minutes"
+
+by [Erik Fröjdh](https://www.psi.ch/en/lxn/people/lars-erik-frojd)
+
+# Day
+![](figures/group_picture.jpg){.slide-photo .nostretch}
+
+## what I missed
+
+![](figures/Jeremy.jpg){.slide-photo .nostretch}
+
+# Zurich
+
+![](figures/ein.png){.slide-photo .nostretch}
+
+
+## Zurich
+
+![](figures/lake.png){.slide-photo .nostretch}
+
+## Zurich
+
+![](figures/solar.png){.slide-photo .nostretch}
+
+## Zurich
+
+![](figures/cow.png){.slide-photo .nostretch}
+
+## Zurich
+
+![](figures/tower.png){.slide-photo .nostretch}
+
+## Zurich
+
+![](figures/city.png){.slide-photo .nostretch}

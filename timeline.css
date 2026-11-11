@@ -1,0 +1,443 @@
+.reveal .footer,
+.reveal .slide-number,
+.reveal .progress {
+  display: none !important;
+}
+
+.reveal .slides section {
+  padding-bottom: 6rem;
+}
+
+.reveal .slides section:has(.pair) {
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 5.5rem;
+}
+
+.reveal .slides section .pair {
+  flex: 1 1 auto;
+  display: block !important;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.reveal .slides section .pair > p {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  column-gap: 12px;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+}
+
+.reveal .slides section .pair img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  min-width: 0 !important;
+  object-fit: cover;
+  margin: 0 !important;
+}
+
+body.is-whoami .reveal .slides section.present:has(img.sea) p,
+body.is-whoami .reveal .slides section.present:has(img.rock) p {
+  text-align: center !important;
+}
+
+.reveal .slides section img.sea,
+.reveal .slides section img.rock {
+  display: inline-block !important;
+  width: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  object-fit: contain;
+}
+
+.reveal .slides section img.sea {
+  height: 500px !important;
+  max-height: 500px !important;
+  max-width: 100% !important;
+}
+
+.reveal .slides section img.rock {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 460px !important;
+}
+
+body.is-whoami .reveal .slides section.present:has(img.rock) {
+  padding-right: 34%;
+}
+
+.reveal .slides section .pair img:first-of-type {
+  object-position: 78% 42%;
+}
+
+.reveal .slides section .pair img:last-of-type {
+  object-position: center 18%;
+}
+
+/* Heading stays at the top. The photo is centred in the space under it.
+   A credit line stays below the photo instead of sharing that space. */
+.reveal .slides section.slide:has(img.slide-photo) {
+  display: flex !important;
+  flex-direction: column;
+  height: 700px;
+  box-sizing: border-box;
+  padding-bottom: 5.5rem;
+}
+
+.reveal .slides section.slide:has(img.slide-photo) > :is(h1, h2, h3) {
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+
+.reveal .slides section.slide:has(img.slide-photo) > :has(img.slide-photo) {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  width: 100%;
+  margin: 0;
+  padding-top: 1.6rem;
+}
+
+.reveal
+  .slides
+  section.slide:has(img.slide-photo)
+  > :not(:is(h1, h2, h3)):not(:has(img.slide-photo)) {
+  flex: 0 0 auto;
+  margin: 0.5rem 0 0;
+  text-align: center;
+}
+
+.reveal .slides section img.slide-photo {
+  width: auto !important;
+  height: auto !important;
+  max-width: 86% !important;
+  max-height: 400px !important;
+}
+
+.reveal a.img-source {
+  display: block;
+  margin-top: 0.15em;
+  font-size: 0.38em;
+  line-height: 1.2;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.rse-hero {
+  display: block;
+  height: 190px;
+  width: auto;
+  margin: 0 auto 0.6rem;
+  filter: drop-shadow(0 14px 22px rgba(152, 40, 112, 0.4));
+  animation: rse-logo-in 0.9s cubic-bezier(0.22, 0.8, 0.3, 1) both;
+}
+
+@keyframes rse-logo-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rse-timeline {
+  position: fixed;
+  z-index: 40;
+  left: 6vw;
+  right: 6vw;
+  bottom: 10px;
+  height: 108px;
+  pointer-events: none;
+}
+
+.rse-here-label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Source Sans Pro", "Source Sans 3", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #fff;
+  text-align: center;
+  transform: translateX(-50%);
+  transition: left 0.75s cubic-bezier(0.22, 0.8, 0.3, 1);
+}
+
+.rse-here-label.is-hidden {
+  visibility: hidden;
+}
+
+.rse-rails {
+  position: absolute;
+  left: 78px;
+  right: 78px;
+  top: 54px;
+  height: 12px;
+}
+
+.rse-rail {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: #e4e7ee;
+  border-radius: 1px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+}
+
+.rse-sleepers {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2px;
+  height: 8px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0 14px,
+    #8d847c 14px 17px,
+    transparent 17px 28px
+  );
+}
+
+.rse-train {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  width: 152px;
+  height: 40px;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.45));
+  transition: left 0.75s cubic-bezier(0.22, 0.8, 0.3, 1);
+  z-index: 2;
+}
+
+.rse-stops {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rse-stops li {
+  position: absolute;
+  top: 54px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.rse-stops li::before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 10px;
+  margin: 0 auto;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.28);
+  transition:
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.rse-stops li.is-on::before {
+  background: #ec0000;
+  box-shadow: 0 0 8px rgba(236, 0, 0, 0.75);
+}
+
+.rse-stops li.is-here::before {
+  background: #ff2a2a;
+  box-shadow: 0 0 12px rgba(236, 0, 0, 0.95);
+}
+
+.rse-stops span {
+  display: block;
+  margin-top: 6px;
+  font-family: "Source Sans Pro", "Source Sans 3", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.35);
+  transition: color 0.4s ease;
+}
+
+.rse-stops li.is-on span {
+  color: #ffb3b3;
+}
+
+.rse-stops li.is-here span {
+  color: #ffffff;
+}
+
+.life-photo {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: #191919;
+}
+
+.life-photo.is-on {
+  display: block;
+}
+
+.life-photo-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.life-photo img {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.life-photo img[hidden] {
+  display: none !important;
+}
+
+.life-photo.is-pair .life-photo-a {
+  object-position: 78% 42%;
+}
+
+.life-photo.is-pair .life-photo-b {
+  object-position: center 18%;
+}
+
+.life-photo.is-rock .life-photo-a {
+  object-position: 82% center;
+}
+
+.life-photo-credit {
+  position: absolute;
+  left: 1.1rem;
+  bottom: 0.7rem;
+  pointer-events: auto;
+  color: #fff;
+  font-family: "Source Sans Pro", "Source Sans 3", sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  opacity: 0.75;
+  text-decoration: none;
+}
+
+body.has-life-photo .reveal .slides section.present > img,
+body.has-life-photo .reveal .slides section.present > .pair,
+body.has-life-photo .reveal .slides section.present > p:has(img),
+body.has-life-photo .reveal .slides section.present > img + p {
+  visibility: hidden;
+}
+
+.life-map {
+  display: none;
+  position: fixed;
+  z-index: 30;
+  top: 56px;
+  right: 3.5vw;
+  bottom: 120px;
+  width: min(46vw, 560px);
+  overflow: hidden;
+  border-radius: 14px;
+  background: #161616;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+body.is-whoami .life-map {
+  display: block;
+}
+
+.life-map-canvas,
+.life-map .leaflet-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #161616;
+}
+
+.life-map .leaflet-tile-pane {
+  filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.95);
+}
+
+.life-map-name {
+  position: absolute;
+  z-index: 500;
+  top: 12px;
+  left: 12px;
+  max-width: calc(100% - 24px);
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(12, 12, 12, 0.72);
+  color: #fff;
+  font-family: "Source Sans Pro", "Source Sans 3", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.life-map-pin {
+  width: 14px;
+  height: 14px;
+  background: #ec0000;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(236, 0, 0, 0.35);
+}
+
+.life-map .leaflet-control-attribution {
+  background: rgba(0, 0, 0, 0.55);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 9px;
+}
+
+.life-map .leaflet-control-attribution a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+body.is-whoami .reveal .slides section.present:not(:has(section)) {
+  padding-right: 44%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rse-hero,
+  .rse-train,
+  .rse-here-label,
+  .rse-stops li::before {
+    animation: none;
+    transition: none;
+  }
+}

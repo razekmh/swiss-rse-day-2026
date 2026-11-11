@@ -1,0 +1,16 @@
+project:
+  type: default
+  output-dir: _site
+  render:
+    - index.qmd
+
+format:
+  revealjs:
+    footer: "{{< meta title >}}: <https://www.razekmh.dev/#talks>"
+    hash-type: number
+    history: false
+    incremental: true
+    link-external-icon: true
+    slide-number: true
+    theme: dark
+    transition: fade
