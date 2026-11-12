@@ -77,7 +77,8 @@
     var train = root.querySelector(".rse-train");
     var hereLabel = root.querySelector(".rse-here-label");
     var stopsEl = root.querySelector(".rse-stops");
-    var inset = 78;
+    var inset = "var(--rse-inset)";
+    var labelGap = 10;
 
     function slideName(slide) {
       if (slide.classList.contains("quarto-title-block")) return "";
@@ -95,13 +96,7 @@
     function place(i, n) {
       if (n <= 1) return "50%";
       return (
-        "calc(" +
-        inset +
-        "px + (100% - " +
-        inset * 2 +
-        "px) * " +
-        i / (n - 1) +
-        ")"
+        "calc(" + inset + " + (100% - 2 * " + inset + ") * " + i / (n - 1) + ")"
       );
     }
 
@@ -119,6 +114,27 @@
           li.appendChild(span);
         }
         stopsEl.appendChild(li);
+      });
+    }
+
+    // Hide station names that would overlap. The current station always
+    // keeps its name; the rest are kept left to right while they fit.
+    function declutter(current) {
+      var spans = stopsEl.querySelectorAll("li.is-major span");
+      var mine = current.querySelector("span");
+      var kept = [];
+      spans.forEach(function (span) {
+        span.classList.remove("is-crowded");
+      });
+      if (mine) kept.push(mine.getBoundingClientRect());
+      spans.forEach(function (span) {
+        if (span === mine) return;
+        var r = span.getBoundingClientRect();
+        var clash = kept.some(function (k) {
+          return r.left < k.right + labelGap && r.right + labelGap > k.left;
+        });
+        if (clash) span.classList.add("is-crowded");
+        else kept.push(r);
       });
     }
 
@@ -140,6 +156,7 @@
       var current = stops[at];
       var name = current.dataset.name || "";
       var namedOnTheRail = current.classList.contains("is-major");
+      declutter(current);
       hereLabel.textContent = name;
       hereLabel.classList.toggle("is-hidden", namedOnTheRail || !name);
     }
@@ -159,6 +176,8 @@
       sync();
     });
     Reveal.on("slidechanged", sync);
+    Reveal.on("resize", sync);
+    if (document.fonts) document.fonts.ready.then(sync);
   })();
 </script>
 <script src="life-map.js"></script>

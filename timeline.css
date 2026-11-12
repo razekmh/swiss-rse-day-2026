@@ -160,6 +160,10 @@ body.is-whoami .reveal .slides section.present:has(img.rock) {
 }
 
 .rse-timeline {
+  --rse-inset: clamp(36px, 6vw, 78px);
+  --rse-train-w: clamp(76px, 11vw, 152px);
+  --rse-train-h: calc(var(--rse-train-w) * 40 / 152);
+  --rse-rail-top: 54px;
   position: fixed;
   z-index: 40;
   left: 6vw;
@@ -171,7 +175,7 @@ body.is-whoami .reveal .slides section.present:has(img.rock) {
 
 .rse-here-label {
   position: absolute;
-  top: 0;
+  top: calc(var(--rse-rail-top) - var(--rse-train-h) - 18px);
   left: 50%;
   max-width: 180px;
   overflow: hidden;
@@ -193,9 +197,9 @@ body.is-whoami .reveal .slides section.present:has(img.rock) {
 
 .rse-rails {
   position: absolute;
-  left: 78px;
-  right: 78px;
-  top: 54px;
+  left: var(--rse-inset);
+  right: var(--rse-inset);
+  top: var(--rse-rail-top);
   height: 12px;
 }
 
@@ -226,10 +230,10 @@ body.is-whoami .reveal .slides section.present:has(img.rock) {
 
 .rse-train {
   position: absolute;
-  top: 16px;
+  top: calc(var(--rse-rail-top) + 2px - var(--rse-train-h));
   left: 50%;
-  width: 152px;
-  height: 40px;
+  width: var(--rse-train-w);
+  height: var(--rse-train-h);
   transform: translateX(-50%);
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.45));
   transition: left 0.75s cubic-bezier(0.22, 0.8, 0.3, 1);
@@ -246,7 +250,7 @@ body.is-whoami .reveal .slides section.present:has(img.rock) {
 
 .rse-stops li {
   position: absolute;
-  top: 54px;
+  top: var(--rse-rail-top);
   transform: translateX(-50%);
   text-align: center;
 }
@@ -284,6 +288,10 @@ body.is-whoami .reveal .slides section.present:has(img.rock) {
   white-space: nowrap;
   color: rgba(255, 255, 255, 0.35);
   transition: color 0.4s ease;
+}
+
+.rse-stops span.is-crowded {
+  visibility: hidden;
 }
 
 .rse-stops li.is-on span {
@@ -430,6 +438,25 @@ body.is-whoami .reveal .slides section.present:not(:has(section)) {
   padding-right: 44%;
   box-sizing: border-box;
   text-align: left;
+}
+
+@media (max-width: 600px) {
+  .rse-timeline {
+    --rse-rail-top: 48px;
+    left: 3vw;
+    right: 3vw;
+    height: 88px;
+  }
+
+  .rse-here-label,
+  .rse-stops span {
+    font-size: 10px;
+    letter-spacing: 0.04em;
+  }
+
+  .rse-stops li::before {
+    width: 2px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
